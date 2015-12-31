@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns="http://www.vip.com/schema/athena"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:beans="http://www.springframework.org/schema/beans"
+               targetNamespace="http://www.vip.com/schema/athena"
+               elementFormDefault="qualified"
+               attributeFormDefault="unqualified">
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+
+
+    <xsd:element name="job">
+        <xsd:annotation>
+            <xsd:documentation source="java:com.vip.athena.job.config.JobDefinition">
+                <![CDATA[
+                    Defines a single job
+                ]]>
+            </xsd:documentation>
+        </xsd:annotation>
+
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="name" type="xsd:string" use="required" />
+                    <xsd:attribute name="group" type="xsd:string" use="optional" />
+                    <xsd:attribute name="jobClass" type="xsd:string" use="required">
+                        <xsd:annotation>
+                            <xsd:documentation>
+                                <![CDATA[
+                                 Job class name, must be a fully qualified class name.
+                                ]]>
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+                    <xsd:attribute name="cron" type="xsd:string" />
+                    <xsd:attribute name="delay" type="xsd:integer"/>
+                    <xsd:attribute name="interval" type="xsd:integer"/>
+                    <xsd:attribute name="rate" type="xsd:integer"/>
+                    <xsd:attribute name="overwrite" type="xsd:boolean" />
+                    <xsd:attribute name="lazyExecution" type="xsd:boolean" />
+                    <xsd:attribute name="description" type="xsd:string" />
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+
+    </xsd:element>
+
+</xsd:schema>
