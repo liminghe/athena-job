@@ -36,7 +36,7 @@
                     <xsd:attribute name="interval" type="xsd:integer"/>
                     <xsd:attribute name="rate" type="xsd:integer"/>
                     <xsd:attribute name="overwrite" type="xsd:boolean" />
-                    <xsd:attribute name="lazyExecution" type="xsd:boolean" />
+                    <xsd:attribute name="lazySchedule" type="xsd:boolean" />
                     <xsd:attribute name="description" type="xsd:string" />
                 </xsd:extension>
             </xsd:complexContent>

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 /**
  * @author waying.he
  */
-public class JobNamespaceHandler extends NamespaceHandlerSupport {
+public class AthenaNamespaceHandler extends NamespaceHandlerSupport {
 
     public void init() {
         registerBeanDefinitionParser("job", new AthenaJobBeanDefinitionParser());

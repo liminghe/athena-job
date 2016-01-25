@@ -7,7 +7,9 @@
                         http://www.vip.com/schema/athena
                         http://www.vip.com/schema/athena/job.xsd">
 
-    <athena:job name="helloJob" jobClass="com.vip.athena.job.HelloJob" cron="0/5 * * ? * *" description="Hello World Job"/>
+    <athena:job name="helloJob" jobClass="com.vip.athena.job.HelloJob" cron="0/5 * * ? * *" description="Hello World Job"
+
+        lazySchedule="true"/>
 
 
 </beans>

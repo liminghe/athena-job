@@ -46,7 +46,7 @@ public class JobDefinition {
      *需要在管理中心手动启动作业才能将作业纳入作业调度，
      * 默认系统启动时就将作业纳入调度中
      */
-    private boolean lazyExecution = false;
+    private boolean lazySchedule = false;
 
     /**
      * 作业描述信息
@@ -124,12 +124,12 @@ public class JobDefinition {
         this.override = override;
     }
 
-    public boolean isLazyExecution() {
-        return lazyExecution;
+    public boolean isLazySchedule() {
+        return lazySchedule;
     }
 
-    public void setLazyExecution(boolean lazyExecution) {
-        this.lazyExecution = lazyExecution;
+    public void setLazySchedule(boolean lazySchedule) {
+        this.lazySchedule = lazySchedule;
     }
 
     public String getDescription() {

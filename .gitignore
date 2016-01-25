@@ -2,4 +2,4 @@
 /target/
 *.iml
 *.classpath
-
+/.idea
