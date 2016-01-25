@@ -46,6 +46,14 @@ public class ZooKeeperConfig {
         this.namespace = namespace;
     }
 
+    public String getConnectString() {
+        return connectString;
+    }
+
+    public String getNamespace() {
+        return namespace;
+    }
+
     public int getConnectionTimeoutMs() {
         return connectionTimeoutMs;
     }

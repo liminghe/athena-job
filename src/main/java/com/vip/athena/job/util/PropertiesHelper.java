@@ -13,6 +13,7 @@ public class PropertiesHelper {
 
     public PropertiesHelper(Properties properties) {
         Preconditions.checkArgument(properties != null, "properties must not be null");
+        this.properties = properties;
     }
 
 
